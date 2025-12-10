@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  cv:
+    build: .
+    container_name: cv-generator
+    volumes:
+      - ./cv:/app/cv
+      - ./pdf:/app/pdf
+    command: ["node", "cv/render.js"]

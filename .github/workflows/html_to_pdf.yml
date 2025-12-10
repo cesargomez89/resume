@@ -12,16 +12,16 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
-      - name: Install Puppeteer dependencies
+      - name: Install Puppeteer dependencies (minimal)
         run: |
           sudo apt-get update
           sudo apt-get install -y \
             fonts-noto \
             fonts-noto-color-emoji \
-            libxkbcommon0 \
-            libgbm1
+            libgbm1 \
+            libxkbcommon0
 
       - name: Install Node + Puppeteer
         run: |
@@ -29,10 +29,12 @@ jobs:
           npm install puppeteer
 
       - name: Generate PDF with Puppeteer
-        run: node cv/render.js
+        run: |
+          mkdir -p pdf
+          node cv/render.js
 
       - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
           name: Cesar_Gomez_Senior_RoR_Engineer
-          path: Cesar_Gomez_Senior_RoR_Engineer.pdf
+          path: pdf/Cesar_Gomez_Senior_RoR_Engineer.pdf

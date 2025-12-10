@@ -1,121 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>Cesar Gomez — Resume</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <title>Cesar Gomez — Senior Ruby on Rails Engineer</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
 
-    <header>
-      <h1>Cesar Gomez</h1>
-      <p>Senior Ruby on Rails Engineer</p>
-      <p>Mexico (Colima)</p>
-      <p>Email: <a href="mailto:cesargomez89@gmail.com">cesargomez89@gmail.com</a></p>
-      <p>
-      <a href="https://www.linkedin.com/in/cesargomez89">LinkedIn</a> · 
-      <a href="https://github.com/cesargomez89">GitHub</a>
-      </p>
+  <body>
+    <header class="header-grid">
+      <div class="header-left">
+        <h1>Cesar Gomez</h1>
+        <div class="role">Senior Ruby on Rails Engineer</div>
+
+        <div class="info-block">
+          <div><strong>Languages:</strong> Spanish (native), English (professional)</div>
+          <div><strong>Availability:</strong> Remote / Hybrid</div>
+          <div><strong>Location:</strong>Colima, Mexico</div>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="contact">
+          <a href="mailto:cesargomez89@gmail.com">cesargomez89@gmail.com</a><br />
+          <a href="https://www.linkedin.com/in/cesargomez89">linkedin.com/in/cesargomez89</a><br />
+          <a href="https://github.com/cesargomez89">github.com/cesargomez89</a><br />
+        </div>
+      </div>
     </header>
 
     <section>
       <h2>Professional Summary</h2>
-      <p>Senior Software Engineer with 10+ years of experience designing, building, and modernizing scalable applications using Ruby on Rails. Strong background in system design, performance optimization, architecture improvements, and AWS-based infrastructure. Known for improving engineering quality, reducing operational issues, optimizing CI pipelines, upgrading legacy systems, and mentoring developers.</p>
+      <p>
+      Senior Software Engineer with 10+ years of experience building, scaling, and modernizing
+      Ruby on Rails applications. Strong background in backend architecture, performance optimization,
+      AWS, system reliability, and upgrading legacy systems. Known for improving engineering quality,
+      refining CI pipelines, reducing operational issues, and mentoring developers. Delivers maintainable,
+      scalable solutions in fast-paced environments.
+      </p>
     </section>
 
     <section>
       <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Backend:</strong> Ruby, Rails, Sinatra, REST APIs</li>
-        <li><strong>Frontend:</strong> JavaScript, React, Hotwire, Turbo</li>
-        <li><strong>Testing:</strong> RSpec, Minitest, Capybara</li>
-        <li><strong>Databases:</strong> PostgreSQL, MySQL, DynamoDB, ElasticSearch</li>
-        <li><strong>DevOps / Cloud:</strong> AWS, Docker, CI/CD, NGINX</li>
-        <li><strong>Architecture:</strong> Rails Engines, Packwerk</li>
-      </ul>
+      <p><strong>Backend:</strong> Ruby, Ruby on Rails, Sinatra, REST APIs, Microservices, Kafka, SQS, Redis</p>
+      <p><strong>Frontend:</strong> JavaScript, React, Nest, Hotwire, Turbo, Stimulus, HTML, HAML, CSS, SASS</p>
+      <p><strong>Testing:</strong> RSpec, Minitest, Capybara, TDD/BDD, Static Analysis</p>
+      <p><strong>Databases:</strong> PostgreSQL, MySQL, DynamoDB, ElasticSearch</p>
+      <p><strong>DevOps:</strong> AWS, Docker, CI/CD (GitLab CI), Heroku, NGINX</p>
+      <p><strong>Architecture:</strong> Rails Engines, Packwerk, Performance Profiling</p>
+      <p><strong>Tools:</strong> Git, Vim, Tmux, Observability & Monitoring</p>
     </section>
 
     <section>
       <h2>Professional Experience</h2>
 
-      <h3>Technical Lead — SchoolStatus <span>2023–Present</span></h3>
-      <ul>
-        <li>Built internal APIs using Twilio/Bandwidth for SMS/Calls.</li>
-        <li>Implemented Kafka messaging for reliability and scale.</li>
-        <li>Modernized legacy Rails app and bridged it to Kafka.</li>
-        <li>Built AWS API Gateway integrations with Twilio webhooks.</li>
-        <li>Created internal dashboards for phone number management.</li>
-        <li>Developed ETL tool using Nest.js + React Router.</li>
-      </ul>
+      <div class="job">
+        <h3>
+          Technical Lead — SchoolStatus
+          <span class="date">2023–Present</span>
+        </h3>
+        <ul>
+          <li>Built a new internal API and dashboard for SMS and call delivery using Twilio and Bandwidth.</li>
+          <li>Implemented Kafka-based message queues to improve reliability and scalability.</li>
+          <li>Upgraded a legacy Rails app and connected it to the new Kafka messaging system.</li>
+          <li>Implemented AWS API Gateway to handle incoming webhooks and push events into Kafka.</li>
+          <li>Created dashboards to manage Twilio profiles for districts.</li>
+          <li>Built internal ETL tools using Nest.js and React Router.</li>
+        </ul>
+      </div>
 
-      <h3>Senior Software Engineer — Donorbox <span>2022–2023</span></h3>
-      <ul>
-        <li>Built donation widget for web + mobile.</li>
-        <li>Integrated PayPal + Stripe.</li>
-        <li>Improved backend architecture + test suite.</li>
-      </ul>
+      <div class="job">
+        <h3>
+          Senior Software Engineer — Donorbox
+          <span class="date">2022–2023</span>
+        </h3>
+        <ul>
+          <li>Built a donation widget for phones/tablets/browsers.</li>
+          <li>Integrated Stripe and PayPal for secure payment flows.</li>
+          <li>Improved test suite and maintained Rails backend stability.</li>
+        </ul>
+      </div>
 
-      <h3>Senior Software Engineer — Stadium Goods <span>2021–2022</span></h3>
-      <ul>
-        <li>Implemented ElasticSearch, reducing DB load.</li>
-        <li>Created first Rails Engine for modularity.</li>
-        <li>Built ETL pipeline for 3rd-party sync.</li>
-        <li>Migrated Webpacker → Importmaps.</li>
-        <li>Optimized GitLab CI pipelines.</li>
-      </ul>
+      <div class="job">
+        <h3>
+          Senior Software Engineer — Stadium Goods
+          <span class="date">2021–2022</span>
+        </h3>
+        <ul>
+          <li>Implemented ElasticSearch across high-traffic areas, improving query performance.</li>
+          <li>Designed and shipped the company’s first Rails Engine for cleaner domain boundaries.</li>
+          <li>Built a custom ETL pipeline for order synchronization, improving data reliability.</li>
+          <li>Migrated from Webpacker to Importmaps, reducing build times and CI complexity.</li>
+          <li>Improved GitLab CI pipelines by removing redundant test runs.</li>
+          <li>Delivered real-time features using Hotwire and ActionCable.</li>
+        </ul>
+      </div>
 
-      <h3>Developer — Curacubby <span>2020–2021</span></h3>
-      <ul>
-        <li>Raised test coverage from 60% → 86%.</li>
-        <li>Upgraded Rails 4 → Rails 6.</li>
-        <li>Introduced parallel testing + static analysis.</li>
-        <li>Refactored legacy architecture.</li>
-      </ul>
+      <div class="job">
+        <h3>
+          Developer — Curacubby
+          <span class="date">2020–2021</span>
+        </h3>
+        <ul>
+          <li>Raised test coverage from 60% to 86%, reducing regressions.</li>
+          <li>Upgraded the system from Rails 4 to Rails 6.</li>
+          <li>Introduced parallel testing, static analysis, and improved CI speed.</li>
+          <li>Developed internal dashboards and modular components.</li>
+        </ul>
+      </div>
 
-      <h3>Developer — Kueski <span>2019–2020</span></h3>
-      <ul>
-        <li>Built fraud risk-scoring microservice.</li>
-        <li>Integrated scoring engine with core Rails app.</li>
-      </ul>
+      <div class="job">
+        <h3>
+          Developer — Kueski
+          <span class="date">2019–2020</span>
+        </h3>
+        <ul>
+          <li>Built a risk-scoring microservice that improved fraud detection.</li>
+          <li>Integrated the scoring service with core apps using well-defined API contracts.</li>
+          <li>Improved documentation and coding standards.</li>
+        </ul>
+      </div>
 
-      <h3>Senior Ruby on Rails Engineer — Michelada.io <span>2019–2021</span></h3>
-      <ul>
-        <li>Delivered high-quality features across multiple clients.</li>
-        <li>Improved test coverage & CI stability.</li>
-      </ul>
+      <div class="job">
+        <h3>
+          Senior Ruby on Rails Engineer — Michelada.io
+          <span class="date">2019–2021</span>
+        </h3>
+        <ul>
+          <li>Delivered features across multiple agile client projects.</li>
+          <li>Improved legacy codebases through refactoring and testing.</li>
+          <li>Strengthened CI pipelines and reliability.</li>
+        </ul>
+      </div>
 
-      <h3>Ruby on Rails Engineer — Tangosource <span>2013–2019</span></h3>
-      <ul>
-        <li>Promoted from Junior → Senior Developer.</li>
-        <li>Led internal training program.</li>
-        <li>Improved deploys, monitoring & architecture.</li>
-      </ul>
+      <div class="job">
+        <h3>
+          Ruby on Rails Engineer — Tangosource
+          <span class="date">2013–2019</span>
+        </h3>
+        <ul>
+          <li>Promoted from Junior to Senior Developer; led multiple client projects.</li>
+          <li>Migrated Orbridge (Rails 3→4) and moved infra to AWS (reliability ↑).</li>
+          <li>Built monitoring, logging, backups, and architecture documentation.</li>
+          <li>Led Prepaid2Cash development, integrating Sift Science for fraud detection.</li>
+          <li>Defined coding standards and deployment processes.</li>
+        </ul>
+      </div>
 
-    </section>
-
-    <section>
-      <h2>Selected Projects</h2>
-
-      <h3>Orbridge — Lead Developer</h3>
-      <ul>
-        <li>Migrated Rackspace → AWS.</li>
-        <li>Upgraded Rails 3 → Rails 4.</li>
-        <li>Implemented monitoring, backups, and alerts.</li>
-      </ul>
-
-      <h3>Prepaid2Cash — Lead Developer</h3>
-      <ul>
-        <li>Led engineering direction and efforts.</li>
-        <li>Integrated Sift Science for fraud detection.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Additional Information</h2>
-      <ul>
-        <li><strong>Languages:</strong> Spanish (native), English (professional)</li>
-        <li><strong>Availability:</strong> Remote & hybrid roles</li>
-      </ul>
     </section>
 
   </body>

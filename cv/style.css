@@ -1,43 +1,146 @@
+/* ============================================================
+JetBrains Sans Font
+============================================================ */
+@font-face {
+  font-family: "JetBrains Sans";
+  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/web/JetBrainsMono-Regular.woff2")
+  format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "JetBrains Sans";
+  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/web/JetBrainsMono-Bold.woff2")
+  format("woff2");
+  font-weight: 700;
+}
+
+/* ============================================================
+Base Layout
+============================================================ */
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "JetBrains Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 26px 30px;
   max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  color: #222;
-  line-height: 1.55;
+  background: #ffffff;
+  color: #17161b;
+  line-height: 1.32;
+  font-size: 12px;
 }
 
+/* ============================================================
+Header
+============================================================ */
 h1 {
-  font-size: 2.4rem;
-  margin-bottom: 0;
+  margin: 0;
+  font-size: 27px;
+  font-weight: 700;
+  color: #3b207e;                  /* Dark royal purple */
 }
 
-h2 {
-  margin-top: 2.2rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 2px solid #ddd;
+.role {
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #5533a3;                  /* Slightly brighter but dark */
 }
 
-h3 {
-  margin-top: 1.4rem;
-  display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-}
-
-ul {
-  margin-top: 0.3rem;
-  padding-left: 20px;
+.contact {
+  margin-top: 4px;
+  font-size: 12px;
 }
 
 a {
-  color: #0366d6;
+  color: #5d3dc1;                  /* Deep violet link color */
   text-decoration: none;
 }
 
+/* ============================================================
+Two-Column Header Layout
+============================================================ */
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.header-left h1 {
+  margin: 0;
+}
+
+.info-block {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #2b1669; /* deep purple */
+}
+
+.header-right {
+  text-align: right;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.header-right a {
+  color: #5d3dc1; /* darker purple link */
+  text-decoration: none;
+}
+
+/* ============================================================
+Section Titles
+============================================================ */
+h2 {
+  margin: 20px 0 8px;
+  padding-bottom: 3px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #3b207e;                  /* Same as H1 for branding */
+  border-bottom: 2px solid #c9b7f2; /* Desaturated lavender */
+}
+
+/* ============================================================
+Job Titles & Subheaders
+============================================================ */
+h3 {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b1669;                  /* Dark indigo */
+}
+
+/* ============================================================
+Lists
+============================================================ */
+ul {
+  margin: 4px 0 10px 20px;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+/* ============================================================
+Page-Break Handling for PDF
+============================================================ */
+.job {
+  break-inside: avoid;
+}
+
+/* ============================================================
+Print Overrides (for Puppeteer)
+============================================================ */
 @media print {
   body {
-    margin: 0;
-    padding: 20px;
+    padding: 20px 24px;
+  }
+
+  a {
+    color: #3b207e;
   }
 }
