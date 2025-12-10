@@ -25,8 +25,23 @@ Senior Software Engineer with 10+ years of experience designing, building, and m
 
 ## Professional Experience
 
+### Technical Lead — SchoolStatus
+**Jan 2023 – Present**
+- Buit a new internal API/Dashboard to deliver SMS/Calls using Twilio and Bandwidth.
+- Implemented a Kafka-based message queue to improve reliability and scalability.
+- Upgraded a legacy Rails application and transitioned it to Kafka to connect the new messaging system.
+- Implemented an AWS API Gateway to handle incoming webhooks from Twilio and enqueue payloads to kafka.
+- Created a new internal dashboard to handle and monitor Twilio profiles for each district.
+- Worked on a new internal tool to centralize and transform data from multiple sources(ETL) using Nest.js and React Router.
+
+### Senior Software Engineer — Donorbox
+**Jan 2022 – Dec 2023**
+- Worked on a widget to be able to make donations from tablets/phones/browsers.
+- Implemented different payment providers like PayPal and Stripe to handle donations.
+- Gave support to the Rails backend and improve the test suite.
+
 ### Senior Software Engineer — Stadium Goods
-**Sep 2021 – Dec 2022 | Mexico**  
+**Sep 2021 – Dec 2022**  
 - Implemented ElasticSearch across high-traffic areas of the platform, improving search responsiveness and reducing database query loads.  
 - Designed and shipped the company’s first Rails Engine to isolate domain-specific logic, improve code boundaries, and simplify long-term maintenance.  
 - Rebuilt third-party order synchronization using a custom ETL pipeline, reducing external error rates and increasing data reliability.  
