@@ -1,98 +1,84 @@
 # Cesar Gomez
-**Senior Ruby on Rails Engineer**  
-Mexico (Colima)  
-Email: cesargomez89@gmail.com  
-LinkedIn: https://www.linkedin.com/in/cesargomez89  
-GitHub: https://github.com/cesargomez89
+### Senior Ruby on Rails Engineer
+
+**Languages:** Spanish (native), English (professional)  
+**Availability:** Remote / Hybrid  
+**Location:** Colima, Mexico  
+
+📧 **Email:** [cesargomez89@gmail.com](mailto:cesargomez89@gmail.com)  
+🔗 **LinkedIn:** https://www.linkedin.com/in/cesargomez89  
+💻 **GitHub:** https://github.com/cesargomez89  
 
 ---
 
 ## Professional Summary
-Senior Software Engineer with 10+ years of experience designing, building, and modernizing scalable applications using Ruby on Rails. Strong background in system design, performance optimization, architecture improvements, and AWS-based infrastructure. Known for improving engineering quality, reducing operational issues, optimizing CI pipelines, upgrading legacy systems, and mentoring developers. Delivers reliable, maintainable solutions in fast-paced, agile environments.
+
+Senior Software Engineer with 10+ years of experience building, scaling, and modernizing Ruby on Rails applications. Strong background in backend architecture, performance optimization, AWS, system reliability, and upgrading legacy systems. Known for improving engineering quality, refining CI pipelines, reducing operational issues, and mentoring developers. Delivers maintainable, scalable solutions in fast-paced environments.
 
 ---
 
 ## Technical Skills
-**Backend:** Ruby, Ruby on Rails, Sinatra, REST APIs, Microservices  
-**Frontend:** JavaScript, React, Hotwire, Turbo, Stimulus, HTML, HAML, CSS, SASS  
-**Testing & Quality:** RSpec, Minitest, Capybara, TDD/BDD, Static Analysis, Parallel Testing  
+
+**Backend:** Ruby, Ruby on Rails, Sinatra, REST APIs, Microservices, Kafka, SQS, Redis  
+**Frontend:** JavaScript, React, Nest, Hotwire, Turbo, Stimulus, HTML, HAML, CSS, SASS  
+**Testing:** RSpec, Minitest, Capybara, TDD/BDD, Static Analysis  
 **Databases:** PostgreSQL, MySQL, DynamoDB, ElasticSearch  
-**DevOps / Cloud:** AWS, Docker, CI/CD (GitLab CI), Heroku, NGINX  
-**Architecture:** Rails Engines, Packwerk, Service Boundaries, Performance Profiling  
-**Tools:** Git, Vim, Tmux, Monitoring & Observability
+**DevOps:** AWS, Docker, CI/CD (GitLab CI), Heroku, NGINX  
+**Architecture:** Rails Engines, Packwerk, Performance Profiling  
+**Tools:** Git, Vim, Tmux, Observability & Monitoring  
 
 ---
 
 ## Professional Experience
 
-### Technical Lead — SchoolStatus
-**Jan 2023 – Present**
-- Buit a new internal API/Dashboard to deliver SMS/Calls using Twilio and Bandwidth.
-- Implemented a Kafka-based message queue to improve reliability and scalability.
-- Upgraded a legacy Rails application and transitioned it to Kafka to connect the new messaging system.
-- Implemented an AWS API Gateway to handle incoming webhooks from Twilio and enqueue payloads to kafka.
-- Created a new internal dashboard to handle and monitor Twilio profiles for each district.
-- Worked on a new internal tool to centralize and transform data from multiple sources(ETL) using Nest.js and React Router.
+### Technical Lead — SchoolStatus  
+**2023–Present**
+- Built a new internal API and dashboard for SMS and call delivery using Twilio and Bandwidth.
+- Implemented Kafka-based message queues to improve reliability and scalability.
+- Upgraded a legacy Rails app and connected it to the new Kafka messaging system.
+- Implemented AWS API Gateway to handle incoming webhooks and push events into Kafka.
+- Created dashboards to manage Twilio profiles for districts.
+- Built internal ETL tools using Nest.js and React Router.
 
-### Senior Software Engineer — Donorbox
-**Jan 2022 – Dec 2023**
-- Worked on a widget to be able to make donations from tablets/phones/browsers.
-- Implemented different payment providers like PayPal and Stripe to handle donations.
-- Gave support to the Rails backend and improve the test suite.
+### Senior Software Engineer — Donorbox  
+**2022–2023**
+- Built a donation widget for phones/tablets/browsers.
+- Integrated Stripe and PayPal for secure payment flows.
+- Improved test suite and maintained Rails backend stability.
 
-### Senior Software Engineer — Stadium Goods
-**Sep 2021 – Dec 2022**  
-- Implemented ElasticSearch across high-traffic areas of the platform, improving search responsiveness and reducing database query loads.  
-- Designed and shipped the company’s first Rails Engine to isolate domain-specific logic, improve code boundaries, and simplify long-term maintenance.  
-- Rebuilt third-party order synchronization using a custom ETL pipeline, reducing external error rates and increasing data reliability.  
-- Migrated from Webpacker to Importmaps, significantly reducing CI build times and deployment complexity.  
-- Refactored GitLab CI pipelines to eliminate redundant test runs and improve pipeline throughput.  
-- Delivered real-time features using Hotwire and ActionCable, lowering latency and simplifying front-end behavior.
+### Senior Software Engineer — Stadium Goods  
+**2021–2022**
+- Implemented ElasticSearch across high-traffic areas, improving query performance.
+- Designed and shipped the company’s first Rails Engine for cleaner domain boundaries.
+- Built a custom ETL pipeline for order synchronization, improving data reliability.
+- Migrated from Webpacker to Importmaps, reducing build times and CI complexity.
+- Improved GitLab CI pipelines by removing redundant test runs.
+- Delivered real-time features using Hotwire and ActionCable.
 
-### Developer — Curacubby
-**Jul 2020 – Aug 2021**  
-- Increased overall test coverage from 60% to 86%, reducing regressions and improving engineering onboarding.  
-- Upgraded the platform from Rails 4 to Rails 6, modernizing architecture and enabling new framework capabilities.  
-- Introduced parallel testing and static analysis tools, reducing development and CI feedback cycle times.  
-- Built health-check systems, internal dashboards, and modular components using Rails Engines and React.  
-- Refactored legacy components to reduce technical debt and improve performance of core flows.
+### Developer — Curacubby  
+**2020–2021**
+- Raised test coverage from 60% to 86%, reducing regressions.
+- Upgraded the system from Rails 4 to Rails 6.
+- Introduced parallel testing, static analysis, and improved CI speed.
+- Developed internal dashboards and modular components.
 
-### Developer — Kueski
-**Nov 2019 – Mar 2020**  
-- Built a risk-scoring microservice to detect high-risk users, improving fraud detection and decision-making accuracy.  
-- Integrated the scoring service into core applications using well-defined API contracts.  
-- Documented internal processes and contributed to team-wide coding standards.
+### Developer — Kueski  
+**2019–2020**
+- Built a risk-scoring microservice that improved fraud detection.
+- Integrated the scoring service with core apps using well-defined API contracts.
+- Improved documentation and coding standards.
 
-### Senior Ruby on Rails Engineer — Michelada.io
-**2019 – 2021 | Mexico**  
-- Delivered high-quality features for client and internal projects as part of multiple agile development teams.  
-- Improved maintainability of legacy codebases through refactors, architecture patterns, and enhanced test coverage.  
-- Strengthened CI reliability and testing practices across several projects.
+### Senior Ruby on Rails Engineer — Michelada.io  
+**2019–2021**
+- Delivered features across multiple agile client projects.
+- Improved legacy codebases through refactoring and testing.
+- Strengthened CI pipelines and reliability.
 
-### Ruby on Rails Engineer — Tangosource
-**2013 – 2019 | Mexico**  
-- Promoted from Junior to Senior Developer; led multiple client projects and the company’s internal training program.  
-- Modernized legacy systems, implemented coding standards, and created detailed architectural documentation.  
-- Developed deployment processes, monitoring strategies, and performance improvements for production applications.
+### Ruby on Rails Engineer — Tangosource  
+**2013–2019**
+- Promoted from Junior to Senior Developer; led multiple client projects.
+- Migrated Orbridge (Rails 3→4) and moved infra to AWS.
+- Built monitoring, logging, backups, and architecture documentation.
+- Led Prepaid2Cash development, integrating Sift Science for fraud detection.
+- Defined coding standards and deployment processes.
 
----
-
-## Selected Projects
-
-### Orbridge — Lead Developer  
-**2014–2019**  
-- Migrated infrastructure from Rackspace to AWS, improving reliability and scalability.  
-- Upgraded the application from Rails 3 to Rails 4, stabilizing the platform and reducing operational issues.  
-- Implemented monitoring, logging, and backup strategies to improve observability and disaster recovery.  
-- Created engineering guidelines, architecture diagrams, and documentation used across teams.
-
-### Prepaid2Cash — Lead Developer  
-- Led the technical direction and daily engineering workflow for the platform.  
-- Integrated fraud detection services (Sift Science), improving risk identification and reducing financial exposure.  
-- Coordinated with cross-functional teams to plan new features and improve operational processes.
-
----
-
-## Additional Information
-**Languages:** Spanish (native), English (professional)  
-**Availability:** Open to remote and hybrid roles
