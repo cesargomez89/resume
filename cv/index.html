@@ -14,8 +14,9 @@
 
         <div class="info-block">
           <div><strong>Languages:</strong> Spanish (native), English (professional)</div>
-          <div><strong>Availability:</strong> Remote / Hybrid</div>
           <div><strong>Location:</strong>Colima, Mexico</div>
+          <div><strong>Education:</strong>Systems Engineering bachelor's degree</div>
+          <div><strong>Availability:</strong> Remote / Hybrid</div>
         </div>
       </div>
 
@@ -41,12 +42,12 @@
 
     <section>
       <h2>Technical Skills</h2>
-      <p><strong>Backend:</strong> Ruby, Ruby on Rails, Sinatra, REST APIs, Microservices, Kafka, SQS, Redis</p>
-      <p><strong>Frontend:</strong> JavaScript, React, Nest, Hotwire, Turbo, Stimulus, HTML, HAML, CSS, SASS</p>
+      <p><strong>Backend:</strong> Ruby, Ruby on Rails, Sinatra, REST APIs, Microservices, Nest, Kafka, SQS, Redis</p>
+      <p><strong>Frontend:</strong> JavaScript, React, Hotwire, Turbo, Stimulus, Tailwind, HTML, HAML, CSS, SASS</p>
       <p><strong>Testing:</strong> RSpec, Minitest, Capybara, TDD/BDD, Static Analysis</p>
       <p><strong>Databases:</strong> PostgreSQL, MySQL, DynamoDB, ElasticSearch</p>
       <p><strong>DevOps:</strong> AWS, Docker, CI/CD (GitLab CI), Heroku, NGINX</p>
-      <p><strong>Architecture:</strong> Rails Engines, Packwerk, Performance Profiling</p>
+      <p><strong>Architecture:</strong> Domain Driven Design, Layers, Rails Engines, Packwerk, Performance Profiling</p>
       <p><strong>Tools:</strong> Git, Vim, Tmux, Observability & Monitoring</p>
     </section>
 
@@ -59,12 +60,16 @@
           <span class="date">2023–Present</span>
         </h3>
         <ul>
-          <li>Built a new internal API and dashboard for SMS and call delivery using Twilio and Bandwidth.</li>
+          <li>Built a new internal Rails API and dashboard for SMS and call delivery using Twilio and Bandwidth.</li>
           <li>Implemented Kafka-based message queues to improve reliability and scalability.</li>
           <li>Upgraded a legacy Rails app and connected it to the new Kafka messaging system.</li>
-          <li>Implemented AWS API Gateway to handle incoming webhooks and push events into Kafka.</li>
-          <li>Created dashboards to manage Twilio profiles for districts.</li>
-          <li>Built internal ETL tools using Nest.js and React Router.</li>
+          <li>Improved SMS deliveries from 1200 per minute to 20,000.</li>
+          <li>Increased code coverage of legacy codebase from 0% to 75%.</li>
+          <li> Created a complete docker setup that mimics our production environment and connections across multiple services and apps.</li>
+          <li>Kept coverage of new apps at 90% by building CI reviews and git hooks to detect code without tests.</li>
+          <li>Automated Github releases and Changelog generation based on conventional commits.</li>
+          <li>Created dashboards to manage Twilio profiles for districts and automated the registration process.</li>
+          <li>Built internal ETL tools using Nest.js and React Router to handle DB, SFTP and CSV data.</li>
         </ul>
       </div>
 
@@ -74,9 +79,9 @@
           <span class="date">2022–2023</span>
         </h3>
         <ul>
-          <li>Built a donation widget for phones/tablets/browsers.</li>
-          <li>Integrated Stripe and PayPal for secure payment flows.</li>
-          <li>Improved test suite and maintained Rails backend stability.</li>
+          <li>Built a donation widget for phones/tablets/browsers using pure Javascript web components.</li>
+          <li>Integrated Stripe and PayPal for secure payment flows based on countries and currencies.</li>
+          <li>Improved test suite using Minitest and Cuprite to deal with false positives.</li>
         </ul>
       </div>
 
@@ -97,39 +102,33 @@
 
       <div class="job">
         <h3>
-          Developer — Curacubby
-          <span class="date">2020–2021</span>
-        </h3>
-        <ul>
-          <li>Raised test coverage from 60% to 86%, reducing regressions.</li>
-          <li>Upgraded the system from Rails 4 to Rails 6.</li>
-          <li>Introduced parallel testing, static analysis, and improved CI speed.</li>
-          <li>Developed internal dashboards and modular components.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>
-          Developer — Kueski
-          <span class="date">2019–2020</span>
-        </h3>
-        <ul>
-          <li>Built a risk-scoring microservice that improved fraud detection.</li>
-          <li>Integrated the scoring service with core apps using well-defined API contracts.</li>
-          <li>Improved documentation and coding standards.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>
           Senior Ruby on Rails Engineer — Michelada.io
           <span class="date">2019–2021</span>
         </h3>
         <ul>
-          <li>Delivered features across multiple agile client projects.</li>
-          <li>Improved legacy codebases through refactoring and testing.</li>
-          <li>Strengthened CI pipelines and reliability.</li>
+          <li>Developed features across multiple agile client projects.</li>
+          <li>Improved legacy codebases through refactoring and updated testing practices.</li>
+          <li>Strengthened CI pipelines and reliability across several products.</li>
         </ul>
+
+        <div class="subjob">
+          <h4>Client Project: Curacubby <span class="date">2020–2021</span></h4>
+          <ul>
+            <li>Raised test coverage from 60% to 86%, significantly reducing regressions.</li>
+            <li>Upgraded the platform from Rails 4 to Rails 6.</li>
+            <li>Introduced parallel testing, static analysis, and accelerated CI feedback loops.</li>
+            <li>Developed internal dashboards and modular components.</li>
+          </ul>
+        </div>
+
+        <div class="subjob">
+          <h4>Client Project: Kueski <span class="date">2019–2020</span></h4>
+          <ul>
+            <li>Built a risk-scoring microservice that improved fraud detection accuracy.</li>
+            <li>Integrated the scoring service with core apps through well-defined API contracts.</li>
+            <li>Improved documentation and internal coding standards.</li>
+          </ul>
+        </div>
       </div>
 
       <div class="job">
@@ -138,12 +137,31 @@
           <span class="date">2013–2019</span>
         </h3>
         <ul>
-          <li>Promoted from Junior to Senior Developer; led multiple client projects.</li>
-          <li>Migrated Orbridge (Rails 3→4) and moved infra to AWS (reliability ↑).</li>
-          <li>Built monitoring, logging, backups, and architecture documentation.</li>
-          <li>Led Prepaid2Cash development, integrating Sift Science for fraud detection.</li>
-          <li>Defined coding standards and deployment processes.</li>
+          <li>Promoted from Junior to Senior Developer; led multiple client projects across the company.</li>
+          <li>Modernized legacy systems, improved architecture, and established engineering standards.</li>
+          <li>Created deployment pipelines, monitoring strategies, and performance improvements.</li>
         </ul>
+
+        <div class="subjob">
+          <h4>Client Project: Prepaid2Cash <span class="date">2017–2019</span></h4>
+          <ul>
+            <li>Led backend development and daily engineering workflow for a high-transaction fintech platform.</li>
+            <li>Integrated Sift Science for fraud detection, reducing false positives and improving risk modeling.</li>
+            <li>Designed and implemented new features across the platform while reducing technical debt.</li>
+            <li>Collaborated with cross-functional teams to plan roadmap improvements and optimize operations.</li>
+          </ul>
+        </div>
+
+        <div class="subjob">
+          <h4>Client Project: Orbridge <span class="date">2013–2017</span></h4>
+          <ul>
+            <li>Migrated the platform from Rails 3 to Rails 4, significantly improving stability and maintainability.</li>
+            <li>Moved infrastructure from Rackspace to AWS, improving reliability and scalability.</li>
+            <li>Implemented monitoring, structured logging, and automated backups for production systems.</li>
+            <li>Created architecture diagrams, documentation, and engineering guidelines used by multiple teams.</li>
+          </ul>
+        </div>
+
       </div>
 
     </section>
