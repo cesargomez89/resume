@@ -1,17 +1,46 @@
 /* ============================================================
-JetBrains Sans Font
+Color & Theme Variables
+============================================================ */
+:root {
+  /* Brand Purples */
+  --purple-dark: #3b207e;
+  --purple-medium: #5533a3;
+  --purple-light: #5d3dc1;
+  --purple-accent: #7a52cc;
+  --purple-border: #c9b7f2;
+
+  /* Base Text */
+  --text-main: #17161b;
+  --text-secondary: #2b1669;
+
+  /* Background */
+  --bg-color: #ffffff;
+
+  /* Typography */
+  --font-size-base: 12px;
+  --font-size-h1: 27px;
+  --font-size-h2: 16px;
+  --font-size-h3: 13px;
+  --font-size-h4: 12.5px;
+  --font-size-role: 15px;
+
+  /* Spacing */
+  --page-padding-y: 26px;
+  --page-padding-x: 30px;
+}
+
+/* ============================================================
+Fonts
 ============================================================ */
 @font-face {
   font-family: "JetBrains Sans";
-  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/web/JetBrainsMono-Regular.woff2")
-  format("woff2");
+  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/web/JetBrainsMono-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "JetBrains Sans";
-  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/web/JetBrainsMono-Bold.woff2")
-  format("woff2");
+  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/web/JetBrainsMono-Bold.woff2") format("woff2");
   font-weight: 700;
 }
 
@@ -21,12 +50,12 @@ Base Layout
 body {
   font-family: "JetBrains Sans", Arial, sans-serif;
   margin: 0;
-  padding: 26px 30px;
+  padding: var(--page-padding-y) var(--page-padding-x);
   max-width: 800px;
-  background: #ffffff;
-  color: #17161b;
+  background: var(--bg-color);
+  color: var(--text-main);
   line-height: 1.32;
-  font-size: 12px;
+  font-size: var(--font-size-base);
 }
 
 /* ============================================================
@@ -34,59 +63,30 @@ Header
 ============================================================ */
 h1 {
   margin: 0;
-  font-size: 27px;
+  font-size: var(--font-size-h1);
   font-weight: 700;
-  color: #3b207e;                  /* Dark royal purple */
+  color: var(--purple-dark);
 }
 
 .role {
   margin-top: 2px;
-  font-size: 15px;
+  font-size: var(--font-size-role);
   font-weight: 500;
-  color: #5533a3;                  /* Slightly brighter but dark */
-}
-
-.contact {
-  margin-top: 4px;
-  font-size: 12px;
+  color: var(--purple-medium);
 }
 
 a {
-  color: #5d3dc1;                  /* Deep violet link color */
+  color: var(--purple-light);
   text-decoration: none;
 }
 
 /* ============================================================
-Two-Column Header Layout
+Header Grid
 ============================================================ */
-
 .header-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  align-items: start;
-  margin-bottom: 18px;
-}
-
-.header-left h1 {
-  margin: 0;
-}
-
-.info-block {
-  margin-top: 10px;
-  font-size: 12px;
-  color: #2b1669; /* deep purple */
-}
-
-.header-right {
-  text-align: right;
-  font-size: 12px;
-  line-height: 1.4;
-}
-
-.header-right a {
-  color: #5d3dc1; /* darker purple link */
-  text-decoration: none;
 }
 
 /* ============================================================
@@ -95,22 +95,43 @@ Section Titles
 h2 {
   margin: 20px 0 8px;
   padding-bottom: 3px;
-  font-size: 16px;
+  font-size: var(--font-size-h2);
   font-weight: 700;
-  color: #3b207e;                  /* Same as H1 for branding */
-  border-bottom: 2px solid #c9b7f2; /* Desaturated lavender */
+  color: var(--purple-dark);
+  border-bottom: 2px solid var(--purple-border);
 }
 
 /* ============================================================
-Job Titles & Subheaders
+Job Titles
 ============================================================ */
 h3 {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   margin: 10px 0 4px;
-  font-size: 13px;
+  font-size: var(--font-size-h3);
   font-weight: 600;
-  color: #2b1669;                  /* Dark indigo */
+  color: var(--text-secondary);
+}
+
+/* Industry inline tag */
+.industry-tag {
+  font-size: calc(var(--font-size-base) - 1px);
+  font-weight: 600;
+  color: var(--purple-accent);
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+/* Sub-jobs */
+.subjob h4 {
+  margin: 6px 0 4px;
+  font-size: var(--font-size-h4);
+  font-weight: 600;
+  color: var(--purple-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 /* ============================================================
@@ -126,21 +147,20 @@ li {
 }
 
 /* ============================================================
-Page-Break Handling for PDF
+Page / Print Behavior
 ============================================================ */
-.job {
+.job,
+.subjob {
   break-inside: avoid;
 }
 
-/* ============================================================
-Print Overrides (for Puppeteer)
-============================================================ */
+/* Print Overrides */
 @media print {
   body {
     padding: 20px 24px;
   }
 
   a {
-    color: #3b207e;
+    color: var(--purple-dark);
   }
 }
