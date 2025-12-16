@@ -83,10 +83,16 @@ a {
 /* ============================================================
 Header Grid
 ============================================================ */
+
 .header-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   gap: 20px;
+}
+
+.header-right {
+  justify-self: end;
+  text-align: right;
 }
 
 /* ============================================================
