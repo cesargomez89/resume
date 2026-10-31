@@ -1,155 +1,230 @@
 /* ============================================================
-Color & Theme Variables
+Color & Theme Variables (Executive Slate / Navy)
 ============================================================ */
 :root {
-  /* Brand Purples */
-  --purple-dark: #3b207e;
-  --purple-medium: #5533a3;
-  --purple-light: #5d3dc1;
-  --purple-accent: #7a52cc;
-  --purple-border: #c9b7f2;
+  /* Slate & Navy Palette */
+  --text-main: #0f172a;       /* Slate 900 */
+  --text-secondary: #334155;  /* Slate 700 */
+  --text-muted: #64748b;      /* Slate 500 */
 
-  /* Base Text */
-  --text-main: #17161b;
-  --text-secondary: #2b1669;
+  /* Accents */
+  --accent-primary: #1e3a8a;  /* Deep Navy 900 */
+  --accent-role: #1d4ed8;     /* Tech Blue 700 */
+  --accent-tag: #475569;      /* Slate 600 */
+  --border-subtle: #e2e8f0;   /* Slate 200 */
+  --border-medium: #cbd5e1;   /* Slate 300 */
 
   /* Background */
   --bg-color: #ffffff;
 
-  /* Typography */
-  --font-size-base: 12px;
-  --font-size-h1: 27px;
-  --font-size-h2: 16px;
-  --font-size-h3: 13px;
-  --font-size-h4: 12.5px;
-  --font-size-role: 15px;
+  /* Typography Scale */
+  --font-size-base: 11.5px;
+  --font-size-h1: 25px;
+  --font-size-h2: 12.5px;
+  --font-size-h3: 12.5px;
+  --font-size-h4: 12px;
+  --font-size-role: 14px;
 
   /* Spacing */
-  --page-padding-y: 26px;
-  --page-padding-x: 30px;
-}
-
-/* ============================================================
-Fonts
-============================================================ */
-@font-face {
-  font-family: "JetBrains Sans";
-  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/web/JetBrainsMono-Regular.woff2") format("woff2");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "JetBrains Sans";
-  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/web/JetBrainsMono-Bold.woff2") format("woff2");
-  font-weight: 700;
+  --page-padding-y: 22px;
+  --page-padding-x: 28px;
 }
 
 /* ============================================================
 Base Layout
 ============================================================ */
 body {
-  font-family: "JetBrains Sans", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: var(--page-padding-y) var(--page-padding-x);
-  max-width: 800px;
+  max-width: 820px;
   background: var(--bg-color);
   color: var(--text-main);
-  line-height: 1.32;
+  line-height: 1.4;
   font-size: var(--font-size-base);
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ============================================================
 Header
 ============================================================ */
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: start;
+}
+
 h1 {
   margin: 0;
   font-size: var(--font-size-h1);
   font-weight: 700;
-  color: var(--purple-dark);
+  color: var(--text-main);
+  letter-spacing: -0.02em;
 }
 
 .role {
   margin-top: 2px;
   font-size: var(--font-size-role);
-  font-weight: 500;
-  color: var(--purple-medium);
+  font-weight: 600;
+  color: var(--accent-role);
 }
 
-a {
-  color: var(--purple-light);
-  text-decoration: none;
+.info-inline {
+  margin-top: 5px;
+  color: var(--text-secondary);
+  font-size: calc(var(--font-size-base) - 0.5px);
 }
 
-/* ============================================================
-Header Grid
-============================================================ */
-
-.header-grid {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 20px;
+.info-inline span + span::before {
+  content: " · ";
+  color: var(--border-medium);
+  padding: 0 4px;
 }
 
 .header-right {
   justify-self: end;
   text-align: right;
+  font-size: calc(var(--font-size-base) - 0.5px);
+  line-height: 1.5;
+}
+
+.header-right a {
+  color: var(--accent-role);
+  text-decoration: none;
+}
+
+.header-right a:hover {
+  text-decoration: underline;
 }
 
 /* ============================================================
 Section Titles
 ============================================================ */
 h2 {
-  margin: 20px 0 8px;
-  padding-bottom: 3px;
+  margin: 16px 0 7px;
+  padding-bottom: 4px;
   font-size: var(--font-size-h2);
   font-weight: 700;
-  color: var(--purple-dark);
-  border-bottom: 2px solid var(--purple-border);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-primary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Professional Summary */
+.summary-text {
+  margin: 5px 0 0;
+  color: var(--text-secondary);
+  text-align: justify;
 }
 
 /* ============================================================
-Job Titles
+Technical Skills Grid
 ============================================================ */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 20px;
+  margin-top: 5px;
+}
+
+.skills-col p {
+  margin: 0 0 5px;
+  line-height: 1.35;
+  color: var(--text-secondary);
+}
+
+.skills-col strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* ============================================================
+Education
+============================================================ */
+.education h3 {
+  margin: 4px 0 0;
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.education .institution {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* ============================================================
+Job Entries
+============================================================ */
+.job {
+  margin-top: 10px;
+}
+
+.job:first-of-type {
+  margin-top: 5px;
+}
+
 h3 {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin: 10px 0 4px;
+  margin: 8px 0 3px;
   font-size: var(--font-size-h3);
   font-weight: 600;
-  color: var(--text-secondary);
+  color: var(--text-main);
 }
 
-/* Industry inline tag */
 .industry-tag {
   font-size: calc(var(--font-size-base) - 1px);
-  font-weight: 600;
-  color: var(--purple-accent);
+  font-weight: 500;
+  color: var(--accent-tag);
   margin-left: 6px;
   white-space: nowrap;
 }
 
+.date {
+  font-size: calc(var(--font-size-base) - 0.5px);
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
 /* Sub-jobs */
+.subjob {
+  margin-top: 6px;
+}
+
 .subjob h4 {
-  margin: 6px 0 4px;
+  margin: 4px 0 2px;
   font-size: var(--font-size-h4);
   font-weight: 600;
-  color: var(--purple-dark);
+  color: var(--text-secondary);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
 /* ============================================================
-Lists
+Lists & Bullets
 ============================================================ */
 ul {
-  margin: 4px 0 10px 20px;
+  margin: 3px 0 6px 18px;
   padding: 0;
 }
 
 li {
-  margin-bottom: 3px;
+  margin-bottom: 2.5px;
+  color: var(--text-secondary);
+  line-height: 1.38;
+}
+
+li strong {
+  color: var(--text-main);
+  font-weight: 600;
 }
 
 /* ============================================================
@@ -160,13 +235,23 @@ Page / Print Behavior
   break-inside: avoid;
 }
 
+.page-break-before {
+  break-before: page;
+  page-break-before: always;
+}
+
 /* Print Overrides */
 @media print {
   body {
-    padding: 20px 24px;
+    padding: 0;
+    max-width: 100%;
   }
 
   a {
-    color: var(--purple-dark);
+    color: var(--text-main);
+  }
+
+  h2 {
+    border-bottom: 1px solid var(--border-medium);
   }
 }

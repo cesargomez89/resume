@@ -1,24 +1,14 @@
-FROM node:20-bullseye
+FROM node:26-bookworm
 
-# Install required dependencies for Puppeteer / Chromium
-RUN apt-get update && apt-get install -y \
-  wget \
-  gnupg \
-  fonts-noto \
+# Install Chromium and required fonts
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  chromium \
+  fonts-liberation \
   fonts-noto-color-emoji \
-  libxkbcommon0 \
-  libgbm1 \
-  libasound2 \
-  libnss3 \
-  libatk1.0-0 \
-  libcups2 \
-  libxcomposite1 \
-  libxdamage1 \
-  libxrandr2 \
-  libxshmfence1 \
-  libgtk-3-0 \
-  xvfb \
   && rm -rf /var/lib/apt/lists/*
+
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 
 # Create app directory
 WORKDIR /app

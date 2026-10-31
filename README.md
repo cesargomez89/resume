@@ -1,111 +1,98 @@
-# Cesar Gomez  
-**Senior Ruby on Rails Engineer**
+# Cesar Gomez
+**Technical Lead / Senior Ruby on Rails Engineer**
 
 **Languages:** Spanish (native), English (professional)  
-**Location:** Colima, Mexico  
-**Education:** Systems Engineering (Bachelor’s)  
+**Location:** Colima, Mexico (UTC-6 / CST)  
 **Availability:** Remote / Hybrid  
-
 **Email:** cesargomez89@gmail.com  
 **LinkedIn:** https://www.linkedin.com/in/cesargomez89  
 **GitHub:** https://github.com/cesargomez89  
+**Portfolio:** https://cesargomez89.github.io  
 
 ---
 
 ## Professional Summary
-Senior Ruby on Rails Engineer with 12+ years of experience architecting, scaling, and modernizing backend systems across high-growth SaaS, fintech, and communications platforms. Deep expertise in distributed systems, service decomposition, performance optimization, and upgrading legacy codebases. Known for reducing operational bottlenecks, improving system reliability, enforcing engineering standards, mentoring teams, and delivering stable, well-tested software. Strong collaborator experienced in multi-service platform development, CI/CD automation, and developer tooling in fast-paced product environments.
+
+Technical Lead and Senior Backend Engineer with 13+ years of experience architecting high-throughput SaaS, fintech, and distributed messaging platforms. Deep expertise in distributed systems, event-driven architecture, service decomposition, performance optimization, and upgrading legacy codebases. Track record of eliminating operational bottlenecks, driving system reliability, enforcing engineering standards, and mentoring distributed teams. Strong collaborator with proven success delivering multi-service platforms, CI/CD automation, and developer tooling in fast-paced product environments.
 
 ---
 
 ## Technical Skills
 
-**Backend:** Ruby, Ruby on Rails, Sinatra, REST APIs, Microservices, Nest, Kafka, SQS, Redis  
-**Frontend:** JavaScript, React, Hotwire, Turbo, Stimulus, Tailwind, HTML, HAML, CSS, SASS  
-**Testing:** RSpec, Minitest, Capybara, TDD/BDD, Static Analysis  
-**Databases:** PostgreSQL, MySQL, DynamoDB, ElasticSearch  
-**DevOps:** AWS, Docker, CI/CD (GitLab CI), Heroku, NGINX  
-**Architecture:** Domain Driven Design, Layers, Rails Engines, Packwerk, Performance Profiling  
-**Tools:** Git, Vim, Tmux, Observability & Monitoring  
+**Backend:** Ruby, Ruby on Rails, REST APIs, Kafka, Sidekiq, Nest.js, Redis, Microservices, SQS, Sinatra  
+**Databases:** PostgreSQL, MySQL, Elasticsearch, DynamoDB  
+**DevOps:** AWS, Docker, CI/CD (GitLab CI, GitHub Actions), Heroku, NGINX  
+**Architecture:** Event-Driven Architecture (EDA), Domain-Driven Design (DDD), Layered Architecture, Rails Engines, Packwerk  
+**Testing:** RSpec, TDD / BDD, Capybara, Cuprite, RuboCop, Brakeman, Minitest  
+**Frontend:** JavaScript, React, Hotwire (Turbo, Stimulus), HTML5, CSS3, Tailwind CSS  
+**Tools:** Git, Datadog, Sentry, GitHub Actions, Jira, Docker Compose  
+
+---
+
+## Education
+
+### Bachelor's Degree in Systems Engineering
+**Instituto Tecnologico de Colima** | 2007 - 2013
 
 ---
 
 ## Professional Experience
 
-### Technical Lead — SchoolStatus *(EdTech · K-12 Communications)*  
-**2023–Present**
+### Technical Lead - SchoolStatus *(EdTech · K-12 Communications)*
+**2023 - Present**
 
-- Led the design and evolution of a multi-channel communication platform (SMS, voice) used by thousands of teachers and parents; built with Kafka, Rails, and distributed services.  
-- Scaled SMS delivery throughput from **1,200/min → 20,000/min** by implementing a Kafka-backed messaging pipeline and optimizing delivery fan-out strategies.  
-- Upgraded a critical legacy Rails system and integrated it into the new Kafka architecture, enabling reliable message flow across multiple services.  
-- Reduced manual onboarding from days to hours by automating A2P 10DLC, campaign registration, and Twilio/Bandwidth profile provisioning (API-driven workflows).  
-- Built a data ingestion and provisioning pipeline (DB, SFTP, CSV) using Nest.js to validate, transform, and sync district staff data across internal products.  
-- Created a production-like Docker environment simulating distributed services, Kafka brokers, and API gateways, improving onboarding and debugging.  
-- Increased coverage of a legacy codebase from **0% → 75%** and maintained **90%+** coverage in new services through CI-enforced test detection and pre-commit hooks.  
-- Automated GitHub releases and changelog generation using conventional commits.  
-- Built internal dashboards to manage Twilio and Bandwidth profiles at district scale, automating registration, auditing, and compliance workflows.
-
----
-
-### Senior Software Engineer — Donorbox *(Nonprofit · Donations · Payments)*  
-**2022–2023**
-
-- Developed a cross-device donation widget using vanilla JavaScript and Web Components, improving accessibility.  
-- Integrated Stripe and PayPal with country- and currency-aware routing.  
-- Improved backend stability by strengthening test coverage and replacing flaky system tests with Cuprite-based E2E testing.
+- Architected a distributed event-driven messaging platform serving 1M+ district users by integrating Ruby on Rails, Apache Kafka, and resilient background services.
+- Scaled SMS delivery throughput from 1,200/min to 20,000/min (16x boost) by implementing a Kafka pipeline with Karafka and optimized batch dispatch.
+- Modernized a critical legacy Rails monolith to Rails 7 with zero downtime, eliminating message bottlenecks by integrating Kafka event consumers.
+- Cut telecom onboarding latency by 90% (from days to hours) by automating A2P 10DLC registration and Twilio/Bandwidth profile provisioning via Rails.
+- Engineered an automated data ingestion pipeline syncing 500k+ district staff records daily across internal products using Nest.js and SFTP/CSV integrations.
+- Mentored a squad of 6 engineers across sprint cycles, establishing RFC design reviews and weekly 1:1 technical coaching.
+- Accelerated engineer onboarding and debugging by 50% by building a production-like Docker Compose environment simulating distributed services and Kafka brokers.
+- Elevated test coverage from 0% to 75% on legacy code and maintained 90%+ on new services through automated CI gates and pre-commit hooks.
+- Automated release workflows across 6 repositories using Conventional Commits, cutting weekly release overhead from 3 hours to zero manual intervention.
 
 ---
 
-### Senior Software Engineer — Stadium Goods *(E-commerce · Marketplace)*  
-**2021–2022**
+### Senior Software Engineer - Donorbox *(Nonprofit · Donations · Payments)*
+**2022 - 2023**
 
-- Implemented ElasticSearch across high-traffic search, catalog, and order flows, reducing DB load and improving response times.  
-- Designed and shipped the company’s first Rails Engine, establishing clean domain boundaries.  
-- Built a robust ETL pipeline for third-party order synchronization, reducing integration failures.  
-- Migrated frontend from Webpacker to Importmaps, reducing CI build times and simplifying assets.  
-- Optimized GitLab CI pipelines through job deduplication and better parallelization.  
-- Developed real-time user experiences using Hotwire and ActionCable.
+- Engineered a high-conversion, accessible donation widget using vanilla JavaScript and Web Components, reducing asset bundle size by 40% across mobile devices.
+- Optimized international payment processing by integrating Stripe and PayPal smart routing, reducing transaction failure rates by 15% across 30+ currencies.
+- Reduced CI suite execution time by 35% and eliminated intermittent test flakes by replacing Selenium with Cuprite for headless Chrome testing.
 
 ---
 
-### Senior Ruby on Rails Engineer — Michelada.io  
-**2019–2021**
+### Senior Software Engineer - Stadium Goods *(E-commerce · Marketplace)*
+**2021 - 2022**
 
-- Delivered features and modernization across multiple client projects in an agile consultancy environment.  
-- Improved legacy systems through refactoring, updated testing, and Rails upgrades.  
-- Strengthened CI reliability and standardized engineering practices across products.
-
-#### Client Project: Curacubby *(EdTech · School Billing & Administration)*  
-**2020–2021**  
-- Increased test coverage from 60% → 86%, reducing regressions.  
-- Upgraded Rails 4 → Rails 6 and added modern tooling.  
-- Added parallel testing, static analysis, and CI improvements.  
-- Built internal dashboards and modular Rails Engines.
-
-#### Client Project: Kueski *(Fintech · Lending · Fraud Detection)*  
-**2019–2020**  
-- Built a fraud-scoring microservice for high-volume lending workflows.  
-- Integrated scoring with core apps using API contracts and documentation.  
-- Improved engineering standards, documentation, and code quality.
+- Reduced database read load by 60% and slashed p95 query latency to under 50ms by architecting Elasticsearch clusters for product search and catalog.
+- Established modular domain boundaries by architecting the company's first isolated Rails Engine, decoupling checkout logic and speeding up deploy cycles by 25%.
+- Eliminated 99% of order synchronization errors by building a resilient ETL ingestion pipeline handling high-volume external marketplace orders via Sidekiq.
+- Cut frontend asset build times by 70% in CI pipelines by executing migration from Webpacker to modern Rails Importmaps.
+- Accelerated GitLab CI feedback loops from 22 minutes to 8 minutes through test deduplication, database indexing, and parallel job orchestration.
+- Eliminated price race conditions for 50k+ daily concurrent shoppers by implementing real-time inventory broadcasts via ActionCable and Hotwire Turbo Streams.
 
 ---
 
-### Ruby on Rails Engineer — Tangosource  
-**2013–2019**
+### Senior Ruby on Rails Engineer - Michelada.io *(Software Consultancy)*
+**2019 - 2021**
 
-- Promoted from Junior → Senior Developer while leading multiple long-term client projects.  
-- Modernized legacy systems, improved architecture, and established internal engineering standards.  
-- Built CI/CD pipelines, monitoring strategies, and performance improvements.
+#### Client Project: Curacubby *(EdTech · Billing)*
+**2020 - 2021**
+- Raised test suite coverage from 60% to 86% across billing systems, reducing production regression incidents by 40%.
+- Led migration of core application from Rails 4 to Rails 6, resolving security vulnerabilities and improving response times by 20%.
+- Halved CI pipeline runtimes by configuring parallel test execution, static analysis with RuboCop, and modular Rails Engines.
 
-#### Client Project: Prepaid2Cash *(Fintech · Prepaid Card Processing)*  
-**2017–2019**  
-- Led backend engineering for a high-transaction prepaid card exchange platform.  
-- Integrated Sift Science for fraud detection, reducing false positives.  
-- Delivered major features while reducing technical debt.  
-- Collaborated with product and operations teams on workflows and roadmap planning.
+#### Client Project: Kueski *(Fintech · Fraud Detection)*
+**2019 - 2020**
+- Engineered a low-latency fraud-scoring microservice processing 10k+ daily loan applications with sub-100ms response times.
+- Integrated risk evaluation APIs with core lending systems using strict OpenAPI contracts, cutting contract validation errors to zero.
 
-#### Client Project: Orbridge *(EdTech · Student Travel & Logistics)*  
-**2013–2017**  
-- Migrated Rails 3 → Rails 4, improving performance and maintainability.  
-- Moved infrastructure from Rackspace → AWS, increasing reliability.  
-- Implemented monitoring, structured logging, and automated backups.  
-- Created architecture documentation and engineering standards adopted across teams.
+---
+
+### Ruby on Rails Engineer - Tangosource *(Software Consultancy)*
+**2013 - 2018**
+
+- Promoted from Junior to Senior Engineer within 3 years, leading 4 client backend implementations across fintech and logistics domains.
+- Architected Prepaid2Cash transaction backend and integrated Sift Science fraud detection, reducing fraudulent transactions by 30% while processing millions in card volume.
+- Migrated legacy infrastructure from Rackspace to AWS and upgraded Rails 3 to Rails 4 for Orbridge, achieving 99.9% uptime and automated backups.
