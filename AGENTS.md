@@ -11,8 +11,9 @@ The repository maintains two synchronized representations of the CV alongside au
 flowchart TD
     A["Edit cv/index.html & style.css"] --> B["Render via Puppeteer"]
     B --> C["Generate pdf/Cesar_Gomez_Senior_RoR_Engineer.pdf"]
-    C --> D["Push to main branch"]
-    D --> E["GitHub Actions updates cv-latest release"]
+    C --> D["Bump version in package.json"]
+    D --> E["Push to main branch"]
+    E --> F["Tag release vX.Y.Z & update cv-latest"]
 ```
 
 | Path | Purpose |
@@ -21,6 +22,7 @@ flowchart TD
 | `cv/style.css` | Print styles, variables, typography, and page margins. |
 | `cv/render.js` | Puppeteer script running headless Chromium to generate the PDF. |
 | `README.md` | Plain Markdown version of the resume for GitHub readers. |
+| `package.json` | Project dependencies and semantic version metadata. |
 | `Dockerfile` | Debian Bookworm image with Node 26 and Chromium dependencies. |
 | `docker-compose.yml` | Container definition mounting `cv/` and `pdf/` directories. |
 | `.github/workflows/html_to_pdf.yml` | Continuous Integration and Continuous Deployment (CI/CD) release pipeline. |
@@ -76,6 +78,7 @@ Updates to resume content MUST follow these maintenance rules:
 - Authors MUST treat the Docker Compose render as the reference. Host fonts differ and can hide layout defects.
 - Right-aligned text MUST stay inside `--print-edge-gap`. Without it, Chrome clips the last character of each date.
 - Authors MUST confirm the PDF has exactly two pages after every content change, with the current role alone on page 1.
+- Authors MUST bump `version` in `package.json` and create matching git tags for releases.
 
 ## 2026 CV Standards and Content Quality Rules
 
@@ -125,9 +128,36 @@ Updates to resume content MUST follow these maintenance rules:
 
 ## CI/CD and Release Pipeline
 
-- The workflow triggers automatically on push to `main` when files under `cv/**` change.
-- The job executes `node cv/render.js` on Ubuntu.
-- The job uploads `pdf/Cesar_Gomez_Senior_RoR_Engineer.pdf` to the `cv-latest` tag on GitHub Releases.
+The release pipeline pairs explicit semantic version tags with a rolling latest release.
+
+### Semantic Versioning Rules
+
+- The repository follows Semantic Versioning (`vMAJOR.MINOR.PATCH`).
+- Increment MAJOR for full layout overhauls or profile pivots.
+- Increment MINOR for new career roles or new major sections.
+- Increment PATCH for bullet edits, typos, or style adjustments.
+- Release tags MUST begin with the `v` prefix (for example: `v1.0.0`).
+
+### Release Procedure
+
+1. Verify layout and pagination locally.
+2. Update the `version` property in `package.json`.
+3. Commit all changes to the `main` branch.
+4. Create the semantic version tag:
+   ```bash
+   git tag vX.Y.Z
+   ```
+5. Move the rolling latest tag:
+   ```bash
+   git tag -f cv-latest
+   ```
+6. Push commits and tags to GitHub:
+   ```bash
+   git push origin main
+   git push origin vX.Y.Z
+   git push origin cv-latest --force
+   ```
+7. Verify that GitHub Actions finishes successfully.
 
 ## Agent Guidelines and Operational Rules
 
