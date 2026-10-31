@@ -62,6 +62,9 @@ Use local Node.js when system dependencies for Chromium already exist on the hos
 > [!WARNING]
 > Puppeteer fails with `ENOENT` if the `pdf` directory does not exist prior to rendering.
 
+> [!TIP]
+> If Puppeteer cannot launch its bundled Chrome, set `PUPPETEER_EXECUTABLE_PATH` to a system Chrome or use Docker Compose.
+
 ## Content Synchronization Rules
 
 Updates to resume content MUST follow these maintenance rules:
@@ -70,6 +73,9 @@ Updates to resume content MUST follow these maintenance rules:
 - The `README.md` file MUST remain formatted as standard Markdown.
 - Visual tweaks MUST reside in `cv/style.css` using existing CSS custom properties.
 - Layout modifications MUST respect A4 pagination to prevent awkward page splits or orphaned headings.
+- Authors MUST treat the Docker Compose render as the reference. Host fonts differ and can hide layout defects.
+- Right-aligned text MUST stay inside `--print-edge-gap`. Without it, Chrome clips the last character of each date.
+- Authors MUST confirm the PDF has exactly two pages after every content change, with the current role alone on page 1.
 
 ## 2026 CV Standards and Content Quality Rules
 
