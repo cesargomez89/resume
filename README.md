@@ -13,19 +13,21 @@
 
 ## Professional Summary
 
-Technical Lead and Senior Backend Engineer with 13+ years of experience architecting high-throughput SaaS, fintech, and distributed messaging platforms. Deep expertise in distributed systems, event-driven architecture, service decomposition, performance optimization, and upgrading legacy codebases. Track record of eliminating operational bottlenecks, driving system reliability, enforcing engineering standards, and mentoring distributed teams. Strong collaborator with proven success delivering multi-service platforms, CI/CD automation, and developer tooling in fast-paced product environments.
+Technical Lead and Senior Backend Engineer with 13+ years of experience architecting high-throughput SaaS, fintech, payments, and distributed messaging platforms. Deep expertise in distributed systems, event-driven architecture, service decomposition, performance optimization, and upgrading legacy codebases. Builds AI-assisted engineering workflows, including agent skills, MCP servers, and an LLM wiki, that cut a production error backlog by 48%. Track record of eliminating operational bottlenecks, driving system reliability, enforcing engineering standards, and mentoring distributed teams. Strong collaborator with proven success delivering multi-service platforms, CI/CD automation, and developer tooling in fast-paced product environments.
 
 ---
 
 ## Technical Skills
 
 **Backend:** Ruby, Ruby on Rails, REST APIs, Kafka, Sidekiq, Nest.js, Redis, Microservices, SQS, Sinatra  
+**Payments:** Stripe, Braintree, Adyen, Google Play Billing  
 **Databases:** PostgreSQL, MySQL, Elasticsearch, DynamoDB  
-**DevOps:** AWS, Docker, CI/CD (GitLab CI, GitHub Actions), Heroku, NGINX  
+**DevOps:** AWS, Docker, Terraform, CI/CD (GitLab CI, GitHub Actions), Heroku, NGINX  
 **Architecture:** Event-Driven Architecture (EDA), Domain-Driven Design (DDD), Layered Architecture, Rails Engines, Packwerk  
+**AI Engineering:** Claude Code, opencode, Antigravity, MCP servers, agent skills, AGENTS.md, LLM wiki  
 **Testing:** RSpec, TDD / BDD, Capybara, Cuprite, RuboCop, Brakeman, Minitest  
 **Frontend:** JavaScript, React, Hotwire (Turbo, Stimulus), HTML5, CSS3, Tailwind CSS  
-**Tools:** Git, Datadog, Sentry, GitHub Actions, Jira, Docker Compose  
+**Tools:** Git, Datadog, Sentry, Databricks (SQL), GitHub Actions, Jira, Docker Compose  
 
 ---
 
@@ -38,8 +40,24 @@ Technical Lead and Senior Backend Engineer with 13+ years of experience architec
 
 ## Professional Experience
 
+### Senior Software Engineer - Scribd *(Digital Reading · Subscriptions · Payments)*
+**2026 - Present**
+
+- Cut payments Sentry backlog 48% (202 to 105 issues) and event volume 42% (250k to 144k) through an AI-assisted weekly triage and 74 closed tickets.
+- Eliminated 229k Stripe webhook errors for 10.8k users and fixed checkout 500s for 2,537 by persisting each subscription's Stripe account and handling detached payment methods.
+- Closed a payments log-leak audit across 60+ files, redacting gateway credentials, tokens, and PII, and wrote a rotation runbook covering all 10 payment vendors.
+- Retired legacy payment code by deleting 6,000+ lines (Bango, Braintree Forward API, Fortumo, fraud scoring) and queued 7 unused tables (7M+ rows) for production drop.
+- Migrated 13k retired-carrier subscribers into standard dunning and cancellation using a dry-run-first admin command with dedupe and currency-mismatch rollback.
+- Moved payments alerting to Terraform: adopted 121 Datadog monitors through a batch-import script and repaired or deleted 9 dead monitors.
+- Stabilized Google Play Billing by closing 13 tickets and adding missed-renewal reconciliation, stuck-order tooling, and a v2 payload state resolver.
+- Automated weekly Sentry triage with Claude Code skills that classify issues, group root causes, and draft Jira tickets for approval, shared with the payments team.
+- Built an LLM wiki and a 21-tool MCP server that enforces its schema, capturing 85 incident investigations, 49 plans, and 33 post-deploy verifications.
+- Authored a Nix devenv and agent guidance for the monolith: AGENTS.md, 8 routed guides covering 17 code patterns, and a linter for the docs.
+
+---
+
 ### Technical Lead - SchoolStatus *(EdTech · K-12 Communications)*
-**2023 - Present**
+**2023 - 2026**
 
 - Architected a distributed event-driven messaging platform serving 1M+ district users by integrating Ruby on Rails, Apache Kafka, and resilient background services.
 - Scaled SMS delivery throughput from 1,200/min to 20,000/min (16x boost) by implementing a Kafka pipeline with Karafka and optimized batch dispatch.

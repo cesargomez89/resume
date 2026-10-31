@@ -28,6 +28,7 @@ Color & Theme Variables (Executive Slate / Navy)
   /* Spacing */
   --page-padding-y: 22px;
   --page-padding-x: 28px;
+  --print-edge-gap: 2px;      /* keeps right-aligned text off the PDF clip edge */
 }
 
 /* ============================================================
@@ -243,7 +244,7 @@ Page / Print Behavior
 /* Print Overrides */
 @media print {
   body {
-    padding: 0;
+    padding: 0 var(--print-edge-gap) 0 0;
     max-width: 100%;
   }
 

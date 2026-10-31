@@ -30,8 +30,9 @@
     <section>
       <h2>Professional Summary</h2>
       <p class="summary-text">
-        Technical Lead and Senior Backend Engineer with 13+ years of experience architecting high-throughput SaaS, fintech, and distributed messaging platforms. 
-        Deep expertise in distributed systems, event-driven architecture, service decomposition, performance optimization, and upgrading legacy codebases. 
+        Technical Lead and Senior Backend Engineer with 13+ years of experience architecting high-throughput SaaS, fintech, payments, and distributed messaging platforms.
+        Deep expertise in distributed systems, event-driven architecture, service decomposition, performance optimization, and upgrading legacy codebases.
+        Builds AI-assisted engineering workflows, including agent skills, MCP servers, and an LLM wiki, that cut a production error backlog by <strong>48%</strong>.
         Track record of eliminating operational bottlenecks, driving system reliability, enforcing engineering standards, and mentoring distributed teams. 
         Strong collaborator with proven success delivering multi-service platforms, CI/CD automation, and developer tooling in fast-paced product environments.
       </p>
@@ -43,14 +44,16 @@
       <div class="skills-grid">
         <div class="skills-col">
           <p><strong>Backend:</strong> Ruby, Ruby on Rails, REST APIs, Kafka, Sidekiq, Nest.js, Redis, Microservices, SQS, Sinatra</p>
+          <p><strong>Payments:</strong> Stripe, Braintree, Adyen, Google Play Billing</p>
           <p><strong>Databases:</strong> PostgreSQL, MySQL, Elasticsearch, DynamoDB</p>
           <p><strong>Architecture:</strong> Event-Driven Architecture (EDA), Domain-Driven Design (DDD), Layered Architecture, Rails Engines, Packwerk</p>
+          <p><strong>AI Engineering:</strong> Claude Code, opencode, Antigravity, MCP servers, agent skills, AGENTS.md, LLM wiki</p>
         </div>
         <div class="skills-col">
-          <p><strong>DevOps:</strong> AWS, Docker, CI/CD (GitLab CI, GitHub Actions), Heroku, NGINX</p>
+          <p><strong>DevOps:</strong> AWS, Docker, Terraform, CI/CD (GitLab CI, GitHub Actions), Heroku, NGINX</p>
           <p><strong>Testing:</strong> RSpec, TDD / BDD, Capybara, Cuprite, RuboCop, Brakeman, Minitest</p>
           <p><strong>Frontend:</strong> JavaScript, React, Hotwire (Turbo, Stimulus), HTML5, CSS3, Tailwind CSS</p>
-          <p><strong>Tools:</strong> Git, Datadog, Sentry, GitHub Actions, Jira, Docker Compose</p>
+          <p><strong>Tools:</strong> Git, Datadog, Sentry, Databricks (SQL), GitHub Actions, Jira, Docker Compose</p>
         </div>
       </div>
     </section>
@@ -71,8 +74,28 @@
 
       <div class="job">
         <h3>
+          <span>Senior Software Engineer - Scribd <span class="industry-tag">(Digital Reading · Subscriptions · Payments)</span></span>
+          <span class="date">2026 - Present</span>
+        </h3>
+
+        <ul>
+          <li>Cut payments Sentry backlog <strong>48%</strong> (202 to 105 issues) and event volume <strong>42%</strong> (250k to 144k) through an AI-assisted weekly triage and 74 closed tickets.</li>
+          <li>Eliminated <strong>229k Stripe webhook errors</strong> for 10.8k users and fixed checkout 500s for 2,537 by persisting each subscription's Stripe account and handling detached payment methods.</li>
+          <li>Closed a payments log-leak audit across 60+ files, redacting gateway credentials, tokens, and PII, and wrote a rotation runbook covering <strong>all 10 payment vendors</strong>.</li>
+          <li>Retired legacy payment code by deleting <strong>6,000+ lines</strong> (Bango, Braintree Forward API, Fortumo, fraud scoring) and queued 7 unused tables (7M+ rows) for production drop.</li>
+          <li>Migrated <strong>13k retired-carrier subscribers</strong> into standard dunning and cancellation using a dry-run-first admin command with dedupe and currency-mismatch rollback.</li>
+          <li>Moved payments alerting to Terraform: adopted <strong>121 Datadog monitors</strong> through a batch-import script and repaired or deleted 9 dead monitors.</li>
+          <li>Stabilized Google Play Billing by closing 13 tickets and adding missed-renewal reconciliation, stuck-order tooling, and a v2 payload state resolver.</li>
+          <li>Automated weekly Sentry triage with Claude Code skills that classify issues, group root causes, and draft Jira tickets for approval, shared with the payments team.</li>
+          <li>Built an LLM wiki and a <strong>21-tool MCP server</strong> that enforces its schema, capturing 85 incident investigations, 49 plans, and 33 post-deploy verifications.</li>
+          <li>Authored a Nix devenv and agent guidance for the monolith: AGENTS.md, <strong>8 routed guides</strong> covering 17 code patterns, and a linter for the docs.</li>
+        </ul>
+      </div>
+
+      <div class="job page-break-before">
+        <h3>
           <span>Technical Lead - SchoolStatus <span class="industry-tag">(EdTech · K-12 Communications)</span></span>
-          <span class="date">2023 - Present</span>
+          <span class="date">2023 - 2026</span>
         </h3>
 
         <ul>
@@ -88,7 +111,7 @@
         </ul>
       </div>
 
-      <div class="job page-break-before">
+      <div class="job">
         <h3>
           <span>Senior Software Engineer - Donorbox <span class="industry-tag">(Nonprofit · Donations · Payments)</span></span>
           <span class="date">2022 - 2023</span>
